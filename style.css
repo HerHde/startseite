@@ -1,0 +1,9 @@
+.wrap {
+	margin: 0 auto;
+	width: 80ch;
+}
+
+.wrap p i {
+	color: #333;
+}
+

@@ -1,1 +1,4 @@
 exclude: [commit.sh, index.md, index.asc]
+kramdown:
+  input: GFM
+
