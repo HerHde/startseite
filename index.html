@@ -15,11 +15,11 @@
 		<p><i>Die folgende Nachricht liefere ich aus Spaß gleich doppelt aus. In (aus Markdown generiertem) <b>HTML</b> und als signiertes, ungeparstes Markdown, so wie ich es als Mail schreiben würde (ich nenne es mal <b>plain</b>, weil ich HTML-Mails nicht mag).</i></p>
 
 		<h2>HTML</h2>
-		{% capture md %}{% include_relative index.md %}{% endcapture %}
+		{% capture md %}{% include_relative _includes/index.md %}{% endcapture %}
 		{{ md | markdownify }}
-		
+
 		<h2>Plain</h2>
-		<pre>{% include_relative index.asc %}</pre>
+		<pre>{% include_relative _includes/index.asc %}</pre>
 	</div>
 </body>
 </html>
