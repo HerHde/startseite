@@ -6,9 +6,20 @@
 <head>
 	<meta charset="utf-8">
 	<title>HerH über HTTP (ohne S(o, wie es sein sollte))</title>
+	<link rel="stylesheet" href="./normalize.css">
+	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
-	<h1 title="Message Of The Day">MOTD</h1>
-	<pre>{% include_relative index.asc %}</pre>
+	<div class="wrap">
+		<h1 title="Message Of The Day">MOTD</h1>
+		<p><i>Die folgende Nachricht liefere ich aus Spaß gleich doppelt aus. In (aus Markdown generiertem) <b>HTML</b> und als signiertes, ungeparstes Markdown, so wie ich es als Mail schreiben würde (ich nenne es mal <b>plain</b>, weil ich HTML-Mails nicht mag).</i></p>
+
+		<h2>HTML</h2>
+		{% capture md %}{% include_relative index.md %}{% endcapture %}
+		{{ md | markdownify }}
+		
+		<h2>Plain</h2>
+		<pre>{% include_relative index.asc %}</pre>
+	</div>
 </body>
 </html>
